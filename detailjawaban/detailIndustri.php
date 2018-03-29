@@ -11,9 +11,9 @@ $inner = mysql_fetch_array($query2);
 <div class="breadcrumb-holder">
 		<div class="container-fluid">
 			<ul class="breadcrumb">
-					<li class="breadcrumb-item"><a href="../main.php">Home</a></li>
-					<li class="breadcrumb-item active">Industri</li>
-					<li class="breadcrumb-item active">Jawaban Responden</li>
+					<li class="breadcrumb-item"><a href="main.php">Home</a></li>
+					<li class="breadcrumb-item active"><a href="main.php?page=lihatjawaban/lihatjawabanindustri">Industri</a></li>
+					<li class="breadcrumb-item active"><a href="main.php?page=detailjawaban/detailIndustri&id_responden=<?php echo $buff['id_responden']?>">Detail Jawaban Responden</a></li>
 			</ul>
 		</div>
 </div>

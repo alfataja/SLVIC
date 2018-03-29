@@ -1,9 +1,9 @@
 <div class="breadcrumb-holder">
   <div class="container-fluid">
     <ul class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../main.php">Home</a></li>
-      <li class="breadcrumb-item active">Kawasan</li>
-      <li class="breadcrumb-item active">Hasil Perhitungan</li>
+      <li class="breadcrumb-item"><a href="main.php">Home</a></li>
+      <li class="breadcrumb-item active"><a href="main.php?page=lihatjawaban/lihatjawabankawasan">Kawasan</a></li>
+      <li class="breadcrumb-item active"><a href="main.php?page=hasiljawaban/hasiljawabankawasan">Hasil Perhitungan</a></li>
     </ul>
   </div>
 </div>
@@ -18,39 +18,39 @@
         </div>
         <div class="card-body" align="center">
           <div class="text-center">
-            <select id="pilih" onchange="lihat(this.value, regional.value, banding.value); reset();">
+            <select id="pilih" onchange="lihat(this.value, regional.value, banding.value); reset();" class="bg-dark text-white" style="margin-bottom:20px;">
               <option>Pilih Pertanyaan</option>
                 <?php for($a=1;$a<=17;$a++){ ?>
                   <option value = "<?php echo $a; ?>">Pertanyaan <?php echo $a;?></option>
                 <?php   }?>
             </select>
-            <select id="regional" onchange="lihat(pilih.value,this.value, banding.value); reset();">
+            <select id="regional" onchange="lihat(pilih.value,this.value, banding.value); reset();" class="bg-dark text-white" style="margin-bottom:20px;">
               <option value="">Pilih Lokasi</option>
               <option value="">Nasional</option>
-              <option value="medan">Medan</option>
+              <option value="Medan">Medan</option>
               <option value="Bekasi">Bekasi</option>
-              <option value="bandung">Bandung</option>
-              <option value="semarang">Semarang</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Semarang">Semarang</option>
             </select>
-            <select id="banding" onchange="lihat(pilih.value,regional.value, this.value); reset();">
+            <select id="banding" onchange="lihat(pilih.value,regional.value, this.value); reset();" class="bg-dark text-white" style="margin-bottom:20px;">
               <option value="">Pilih Lokasi</option>
               <option value="">Nasional</option>
-              <option value="medan">Medan</option>
+              <option value="Medan">Medan</option>
               <option value="Bekasi">Bekasi</option>
-              <option value="bandung">Bandung</option>
-              <option value="semarang">Semarang</option>
+              <option value="Bandung">Bandung</option>
+              <option value="Semarang">Semarang</option>
             </select>
           </div>
-         <h4 class="mt-3 text-left"><p id="judul"></p></h4>
+         <h4 class="mt-3 text-left"><p id="judul" align="center"></p></h4>
           <div class="row" hidden="true">
             <canvas id="gambarku" width="1000" height="550" type="hidden"></canvas>
           </div>
           <div class="row">
            <div class="chart-container">
-              <canvas id="myChart" width="20" height="20"></canvas>
+              <canvas id="myChart" width="15" height="10"></canvas>
             </div>
             <div class="chart-container">
-              <canvas id="bandingan" width="20" height="20"></canvas>
+              <canvas id="bandingan" width="15" height="10"></canvas>
             </div>
           </div>
           <div class="btn btn-light text-dark"><a id='link'  onclick="save(pilih.value);">Save as Image</a></div>
@@ -152,20 +152,20 @@
                             data: data1,
                             dataa: persen1,
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
+                                'rgba(221, 14, 42, 1)',
+                                'rgba(38, 180, 192, 1)',
+                                'rgba(234, 163, 19, 1)',
+                                'rgba(104, 135, 138, 1)',
+                                'rgba(171, 199, 19, 1)',
+                                'rgba(41, 152, 207, 1)'
                             ],
                             borderColor: [
-                                'rgba(255,99,132,1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)'
                             ],
                             borderWidth: 1
                         }]
@@ -223,20 +223,20 @@
                             data: data2,
                             datab: persen2,
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
+                                'rgba(221, 14, 42, 1)',
+                                'rgba(38, 180, 192, 1)',
+                                'rgba(234, 163, 19, 1)',
+                                'rgba(104, 135, 138, 1)',
+                                'rgba(171, 199, 19, 1)',
+                                'rgba(41, 152, 207, 1)'
                             ],
                             borderColor: [
-                                'rgba(255,99,132,1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)'
                             ],
                             borderWidth: 1
                         }]
@@ -312,12 +312,12 @@
            // c.fillparent("1")
             c.fillStyle = "rgb(255,255,255)";
             c.fillRect(0,0,1000,550);
-            c.drawImage(ctx,0,50);
-            c.drawImage(dua,500,50);
+            c.drawImage(ctx,0,100);
+            c.drawImage(dua,500,100);
             c.fillStyle = "rgb(0,0,0)";
-            c.font = "16px Arial";
-            c.fillText(judulu,20,20);
-
+            // c.font = "16px Arial";
+            // c.fillText(judulu,20,20);
+            fitTextOnCanvas(judulu, "Arial", 30);
             //c.clearRect(0, 0, canvas.width, canvas.height);
 
             var url = image.toDataURL('image/jpg');
@@ -328,79 +328,20 @@
 
             }
 
+            function fitTextOnCanvas(text,fontface,yPosition){    
 
 
-      /*
-            function banding(item,daerah){
-                var tipe;
-              if(item==2 || item ==3 ||item==5){
-                tipe = "bar";
-              }
-              else{
-                tipe = "pie";
-              }
-              //alert(item);
-              var ctx = document.getElementById("bandingan");
+                var c = image.getContext("2d");
+                var fontsize=100;
+      
 
-
-if(item!=null){
-          if(window.XMLHttpRequest){
-            xmlhttp = new XMLHttpRequest();
+          do{
+            fontsize--;
+            c.font=fontsize+"px "+fontface;
+            }while(c.measureText(text).width>image.width){
+              c.fillText(text,10,yPosition);
             }
-            else {
-              xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
-
-              xmlhttp.onreadystatechange = function() {
-                //alert(xmlhttp.status);
-          if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-
-                var label = [];
-                var data = [];
-                var i =1;
-              //alert("AAAA");
-               aja= JSON.parse(xmlhttp.responseText);
-              // alert(aja['putar']);
-              //alert(xmlhttp.responseText);
-               for(i;i<=aja['putar'];i++){
-                label.push(aja['opsi'+i]);
-                data.push(aja['jumlah'+i]);
-               }
-
-               var myChart = new Chart(ctx, {
-                type: tipe,
-                data: {
-                    labels: label,
-                    datasets: [{
-                            label: '# of Votes',
-                            data: data,
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
-                            ],
-                            borderColor: [
-                                'rgba(255,99,132,1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
-                            ],
-                            borderWidth: 1
-                        }]
-                },
-              });
-            }
-            };
-              xmlhttp.open("GET","diagram.php?q="+item+"&tempat="+daerah,true);
-              xmlhttp.send();
-            }
-
-            }
- */
+    
         </script>
  </section>

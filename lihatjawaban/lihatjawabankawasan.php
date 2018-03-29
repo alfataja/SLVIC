@@ -6,8 +6,8 @@
  <div class="container-fluid">
     <ul class="breadcrumb">
       <li class="breadcrumb-item"><a href="main.php">Home</a></li>
-      <li class="breadcrumb-item active">Kawasan</li>
-      <li class="breadcrumb-item active">Jawaban Responden Kawasan</li>
+      <li class="breadcrumb-item active"><a href="main.php?page=lihatjawaban/lihatjawabankawasan">Kawasan</a></li>
+      <li class="breadcrumb-item active"><a href="main.php?page=lihatjawaban/lihatjawabankawasan">Jawaban Responden</a></li>
     </ul>
   </div>
 </div>
@@ -22,9 +22,8 @@
             <h3 style="margin-top: 3px; margin-bottom: 3px;"><center>Tabel Lihat Jawaban Responden Kawasan</center></h3>
           </div>
           <!-- Awal mulai Region -->
-          <div class="card-body">
-            <div class="row">class="bg-primary text-white">
-                       <tr>
+           <div class="card-body">
+            <div class="row">
               <div class="col-sm-12">
               <select id="region" onchange="cek(this.value);" class="bg-dark text-white" style="margin-bottom:20px;">
                    <option value="">Nasional</option>
@@ -44,16 +43,13 @@
           <!-- Awal mulai Tabel -->
               <div id="isia" class="table-responsive">
                 <table class="table table-sm text-center" id="dataTables">
-                     <thead 
+                     <thead class="bg-primary text-white">
+                        <tr>
                          <th>No</th>
-                         <th>Nama</th>
-                         <th>Tanggal</th>
-                         <th>Jabatan</th>
-                         <th>Telepon</th>
-                         <th>Email</th>
+                         <th>Nama Responden</th>
+                         <th>Tanggal Pengisian</th>
                          <th>Perusahaan</th>
                          <th>Region</th>
-                         <th>Alamat</th>
                          <th>Detail</th>
                        </tr>
                    </thead>
@@ -64,12 +60,8 @@
                       <td><?php echo $a;?></td>
                       <td><?php echo $buff['nm_pemfor'];?></td>
                       <td><?php echo $buff['tgl_pengisian'];?></td>
-                      <td><?php echo $buff['jabatan'];?></td>
-                      <td><?php echo $buff['no_hp'];?></td>
-                      <td><?php echo $buff['email'];?></td>
                       <td><?php echo $buff['nm_kawasan'];?></td>
                       <td><?php echo $buff['region'];?></td>
-                      <td><?php echo $buff['alamat'];?></td>
                       <td>
                        <a href="main.php?page=detailjawaban/detailKawasan&id_responden=<?php echo $buff['id_responden']?>">
                          <button type="button" class="btn btn-primary">Detail</button>

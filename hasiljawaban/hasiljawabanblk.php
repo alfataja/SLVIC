@@ -1,9 +1,9 @@
 <div class="breadcrumb-holder">
   <div class="container-fluid">
     <ul class="breadcrumb">
-      <li class="breadcrumb-item"><a href="../main.php">Home</a></li>
-      <li class="breadcrumb-item active">BLK</li>
-      <li class="breadcrumb-item active">Hasil Perhitungan</li>
+      <li class="breadcrumb-item"><a href="main.php">Home</a></li>
+      <li class="breadcrumb-item active"><a href="main.php?page=lihatjawaban/lihatjawabanblk">BLK</a></li>
+      <li class="breadcrumb-item active"><a href="main.php?page=hasiljawaban/hasiljawabanblk">Hasil Perhitungan</a></li>
     </ul>
   </div>
 </div>
@@ -18,44 +18,44 @@
         </div>
         <div class="card-body" align="center">
         <div class="text-center">
-        <select id="pilih" onchange="lihat(this.value, regional.value, banding.value); reset();">
-        <option>Pilih Pertanyaan</option>
-          <?php for($a=1;$a<=95;$a++){ ?>
-            <option value = "<?php echo $a; ?>">Pertanyaan <?php echo $a;?></option>
-
-         <?php   }?>
+        <select id="pilih" onchange="lihat(this.value, regional.value, banding.value); reset();" class="bg-dark text-white" style="margin-bottom:20px;">
+          <option>Pilih Pertanyaan</option>
+            <?php for($a=1;$a<=95;$a++){ ?>
+              <option value = "<?php echo $a; ?>">Pertanyaan <?php echo $a;?></option>
+            <?php   }?>
         </select>
 
-         <select id="regional" onchange="lihat(pilih.value,this.value, banding.value); reset();">
-        <option value="">Pilih Lokasi</option>
+        <select id="regional" onchange="lihat(pilih.value,this.value, banding.value); reset();" class="bg-dark text-white" style="margin-bottom:20px;">
+                            <option value="">Pilih Lokasi</option>
                             <option value="">Nasional</option>
-                            <option value="aceh">Aceh</option>
-                            <option value="medan">Medan</option>
-                            <option value="bekasi">Bekasi</option>
-                            <option value="bandung">Bandung</option>
-                            <option value="semarang">Semarang</option>
-                            <option value="samarinda">Samarinda</option>
-                            <option value="makassar">Makassar</option>
-                            <option value="sorong">Sorong</option>
+                            <option value="Aceh">Aceh</option>
+                            <option value="Medan">Medan</option>
+                            <option value="Bekasi">Bekasi</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Semarang">Semarang</option>
+                            <option value="Samarinda">Samarinda</option>
+                            <option value="Makassar">Makassar</option>
+                            <option value="Sorong">Sorong</option>
         </select>
 
-          <select id="banding" onchange="lihat(pilih.value,regional.value, this.value); reset();">
-        <option value="">Pilih Lokasi</option>
+        <select id="banding" onchange="lihat(pilih.value,regional.value, this.value); reset();" class="bg-dark text-white" style="margin-bottom:20px;">
+                            <option value="">Pilih Lokasi</option>
                             <option value="">Nasional</option>
-                            <option value="aceh">Aceh</option>
-                            <option value="medan">Medan</option>
-                            <option value="bekasi">Bekasi</option>
-                            <option value="bandung">Bandung</option>
-                            <option value="semarang">Semarang</option>
-                            <option value="samarinda">Samarinda</option>
-                            <option value="makassar">Makassar</option>
-                            <option value="sorong">Sorong</option>
+                            <option value="Aceh">Aceh</option>
+                            <option value="Medan">Medan</option>
+                            <option value="Bekasi">Bekasi</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Semarang">Semarang</option>
+                            <option value="Samarinda">Samarinda</option>
+                            <option value="Makassar">Makassar</option>
+                            <option value="Sorong">Sorong</option>
         </select>
-         </div>
-          <h4 class="mt-3 text-left"><p id="judul"></p></h4>
-          <div class="row" hidden="true">
-            <canvas id="gambarku" width="1000" height="550" type="hidden"></canvas>
-          </div>
+        </div>
+          
+          <h4 class="mt-3 text-left"><p id="judul" align="center"></p></h4>
+            <div class="row" hidden="true">
+              <canvas id="gambarku" width="1000" height="550" type="hidden"></canvas>
+            </div>
           <div class="row">
            <div class="chart-container">
               <canvas id="myChart" width="15" height="10"></canvas>
@@ -163,20 +163,20 @@
                             data: data1,
                             dataa: persen1,
                             backgroundColor: [
-                                'rgba(168, 3, 3, 1)',
-                                'rgba(35, 138, 35, 1)',
-                                'rgba(79, 10, 79, 1)',
-                                'rgba(3, 102, 102, 1)',
-                                'rgba(3, 3, 77, 1)',
-                                'rgba(3, 173, 3, 1)'
+                                'rgba(221, 14, 42, 1)',
+                                'rgba(38, 180, 192, 1)',
+                                'rgba(234, 163, 19, 1)',
+                                'rgba(104, 135, 138, 1)',
+                                'rgba(171, 199, 19, 1)',
+                                'rgba(41, 152, 207, 1)'
                             ],
                             borderColor: [
-                                'rgba(168, 3, 3, 1)',
-                                'rgba(35, 138, 35, 1)',
-                                'rgba(79, 10, 79, 1)',
-                                'rgba(3, 102, 102, 1)',
-                                'rgba(3, 3, 77, 1)',
-                                'rgba(3, 173, 3, 1)'
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)'
                             ],
                             borderWidth: 1
                         }]
@@ -234,20 +234,20 @@
                             data: data2,
                             datab: persen2,
                             backgroundColor: [
-                                'rgba(168, 3, 3, 1)',
-                                'rgba(35, 138, 35, 1)',
-                                'rgba(79, 10, 79, 1)',
-                                'rgba(3, 102, 102, 1)',
-                                'rgba(3, 3, 77, 1)',
-                                'rgba(3, 173, 3, 1)'
+                                'rgba(221, 14, 42, 1)',
+                                'rgba(38, 180, 192, 1)',
+                                'rgba(234, 163, 19, 1)',
+                                'rgba(104, 135, 138, 1)',
+                                'rgba(171, 199, 19, 1)',
+                                'rgba(41, 152, 207, 1)'
                             ],
                             borderColor: [
-                                'rgba(168, 3, 3, 1)',
-                                'rgba(35, 138, 35, 1)',
-                                'rgba(79, 10, 79, 1)',
-                                'rgba(3, 102, 102, 1)',
-                                'rgba(3, 3, 77, 1)',
-                                'rgba(3, 173, 3, 1)'
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)',
+                                'rgba(223, 220, 220, 1)'
                             ],
                             borderWidth: 1
                         }]
