@@ -6,8 +6,8 @@
  <div class="container-fluid">
     <ul class="breadcrumb">
       <li class="breadcrumb-item"><a href="main.php">Home</a></li>
-      <li class="breadcrumb-item active">Asosiasi</li>
-      <li class="breadcrumb-item active">Jawaban Responden Asosiasi</li>
+      <li class="breadcrumb-item active"><a href="main.php?page=lihatjawaban/lihatjawabanasosiasi">Asosiasi</a></li>
+      <li class="breadcrumb-item active"><a href="main.php?page=lihatjawaban/lihatjawabanasosiasi">Jawaban Responden</a></li>
     </ul>
   </div>
 </div>
@@ -46,14 +46,10 @@
                      <thead class="bg-primary text-white">
                        <tr>
                          <th>No</th>
-                         <th>Nama</th>
-                         <th>Tanggal</th>
-                         <th>Jabatan</th>
-                         <th>Telepon</th>
-                         <th>Email</th>
+                         <th>Nama Responden</th>
+                         <th>Tanggal Pengisian</th>
                          <th>Perusahaan</th>
                          <th>Region</th>
-                         <th>Alamat</th>
                          <th>Detail</th>
                        </tr>
                      </thead>
@@ -65,12 +61,8 @@
                       <td><?php echo $a;?></td>
                       <td><?php echo $buff['nm_pemfor'];?></td>
                       <td><?php echo $buff['tgl_pengisian'];?></td>
-                      <td><?php echo $buff['jabatan'];?></td>
-                      <td><?php echo $buff['no_hp'];?></td>
-                      <td><?php echo $buff['email'];?></td>
                       <td><?php echo $buff['nm_blk'];?></td>
                       <td><?php echo $buff['region'];?></td>
-                      <td><?php echo $buff['alamat'];?></td>
                       <td>
                        <a href="main.php?page=detailjawaban/detailAsosiasi&id_responden=<?php echo $buff['id_responden']?>">
                          <button type="button" class="btn btn-primary">Detail</button>
